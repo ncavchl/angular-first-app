@@ -2,6 +2,7 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
+import { Greeting } from './app/greeting';
 import { environment } from './environments/environment';
 
 if (environment.production) {
@@ -15,3 +16,6 @@ platformBrowserDynamic()
   .catch((err) => console.error(err));
 
 // 실제 프로젝트의 main 시작점이 되는 파일
+
+let g = new Greeting();
+g.sayHello('mynamed');
