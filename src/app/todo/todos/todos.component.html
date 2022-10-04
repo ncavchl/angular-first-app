@@ -16,5 +16,7 @@
 {{todos[0].done}}
 {{todos[1].done}}
 <div>
-    <input type="text" placeholder="할 일 추가"/>
+    <input type="text" placeholder="할 일 추가" [(ngModel)]="newText"/>
+    <button (click)="addTodo(newText)">Add</button>
+    {{newText}}
 </div>

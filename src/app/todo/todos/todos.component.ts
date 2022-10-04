@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
+  newText="";
   // todos라는 속성 선언
   todos: {
     done: boolean,
@@ -30,6 +31,12 @@ export class TodosComponent implements OnInit {
     text:string
   }) {
     todo.done = !todo.done
+  }
+
+  addTodo(newText:string){
+    this.todos.push({done:false, text:newText});
+    this.newText="";
+
   }
 }
 
