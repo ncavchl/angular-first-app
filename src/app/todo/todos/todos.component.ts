@@ -12,6 +12,7 @@ export class TodosComponent implements OnInit {
   newText="";
   // todos라는 속성 선언
   todos: Todo[];
+  today: Date = new Date();
   
   constructor() { 
     // todos 속성값 초기화
