@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../share/todo.model';
 
 // @Component - 데코레이터 / 함수처럼 호출 / 메타데이터를 보냄 (속성) / 이 컴포넌트가 어떻게 동작하는지 정의
 @Component({
@@ -10,10 +11,7 @@ export class TodosComponent implements OnInit {
 
   newText="";
   // todos라는 속성 선언
-  todos: {
-    done: boolean,
-    text:string
-  }[];
+  todos: Todo[];
   
   constructor() { 
     // todos 속성값 초기화
@@ -26,19 +24,15 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleTodo(todo: {
-    done: boolean,
-    text:string
-  }) {
+  toggleTodo(todo: Todo) {
     todo.done = !todo.done
   }
 
-  addTodo(newText:string){
-    this.todos.push({done:false, text:newText});
-    this.newText="";
+  addTodo(text:string) {
+    this.todos.push({done:false, text:text})
   }
 
-  deleteTodo(todo:{done:boolean, text:string}){
+  deleteTodo(todo:Todo){
     this.todos= this.todos.filter((value)=> value !=todo)
   }
 }

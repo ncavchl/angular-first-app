@@ -7,7 +7,7 @@
 </div>
 <div>
     <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
-        <input type="checkbox" [checked]="todo.done">{{todo.text}}
+        <app-todo [todo]="todo"></app-todo>
         <button (click)="deleteTodo(todo)">delete</button>
     </div>
     <!-- <div><app-todo></app-todo></div>
@@ -17,7 +17,5 @@
 {{todos[0].done}}
 {{todos[1].done}}
 <div>
-    <input type="text" placeholder="할 일 추가" [(ngModel)]="newText"/>
-    <button (click)="addTodo(newText)">Add</button>
-    {{newText}}
+    <app-add-todo (onTodoAdded)="addTodo($event)" ></app-add-todo>
 </div>
