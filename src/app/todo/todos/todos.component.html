@@ -8,6 +8,7 @@
 <div>
     <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
         <input type="checkbox" [checked]="todo.done">{{todo.text}}
+        <button (click)="deleteTodo(todo)">delete</button>
     </div>
     <!-- <div><app-todo></app-todo></div>
     <div><app-todo></app-todo></div> -->

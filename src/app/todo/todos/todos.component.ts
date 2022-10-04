@@ -36,7 +36,10 @@ export class TodosComponent implements OnInit {
   addTodo(newText:string){
     this.todos.push({done:false, text:newText});
     this.newText="";
+  }
 
+  deleteTodo(todo:{done:boolean, text:string}){
+    this.todos= this.todos.filter((value)=> value !=todo)
   }
 }
 
