@@ -1,0 +1,44 @@
+.title {
+    background-color :blueviolet;
+    padding :40px 20px;
+    color:white;
+    font-weight:normal;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.title img {
+    position:absolute;
+    right:20px;
+    width:70px;
+    height:70px;
+}
+h1, h2 {
+    margin:0;
+    font-weight:normal;
+}
+h1 {
+    margin-bottom: 16px;
+}
+
+.list {
+    position:relative;
+}
+.list > button {
+    position:absolute;
+    right: 10px;
+    top:10px;
+    padding:6px 10px;
+    border-radius:5px;
+    background:darkblue;
+    color:white;
+    border:none;
+    opacity:0.8;
+}
+.list> button:hover {
+    opacity:1;
+}
+app-todo, app-add-todo {
+    border-bottom: 1px solid #ccc;
+}
+
