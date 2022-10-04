@@ -6,9 +6,15 @@
     <h2>5월 25일</h2>
 </div>
 <div>
-    <div><app-todo></app-todo></div>
-    <div><app-todo></app-todo></div>
+    <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
+        <input type="checkbox" [checked]="todo.done">{{todo.text}}
+    </div>
+    <!-- <div><app-todo></app-todo></div>
+    <div><app-todo></app-todo></div> -->
 </div>
+<br/>
+{{todos[0].done}}
+{{todos[1].done}}
 <div>
     <input type="text" placeholder="할 일 추가"/>
 </div>

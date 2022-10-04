@@ -8,11 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  constructor() { }
+  // todos라는 속성 선언
+  todos: {
+    done: boolean,
+    text:string
+  }[];
+  
+  constructor() { 
+    // todos 속성값 초기화
+    this.todos = [
+      {done:false, text:'운동하기'},
+      {done:true, text:'공부하기'},
+    ]
+  }
 
   ngOnInit(): void {
   }
 
+  toggleTodo(todo: {
+    done: boolean,
+    text:string
+  }) {
+    todo.done = !todo.done
+  }
 }
 
 // class에서 속성과 메소드를 통해 view와 데이터를 주고받음 
