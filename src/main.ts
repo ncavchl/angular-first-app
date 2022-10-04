@@ -18,4 +18,4 @@ platformBrowserDynamic()
 // 실제 프로젝트의 main 시작점이 되는 파일
 
 let g = new Greeting();
-g.sayHello('mynamed');
+g.sayHello('James');

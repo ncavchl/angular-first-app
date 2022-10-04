@@ -1,5 +1,5 @@
 export class Greeting {
   sayHello(name: string) {
-    console.log('hello ' + name);
+    console.log('Hello! ' + name);
   }
 }
